@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="building-page-style.css">
+</head>
+
+<header>
+    <nav>
+        <div class="logo">
+
+            <h1>CoogsFlush</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="building-list.html">Building List</a></li>
+            <li><a href="index.html" class="back-to-home">Back to Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <div class="container">
+
+        <div class="image-rating-container">
+            <h1>Melcher Hall</h1>
+            <img src="MelcherHall.jpg" alt="Building Image" height="500px">
+           <!-- <div>
+                <h3>Rating</h3>
+                <img src="rating-star.png" alt="rating" height="20px">
+                
+            </div> -->
+        </div>
+
+        <ul class="tabs">
+            <li class="tab" onclick="showTab('descriptionTab')">Details</li>
+            <li class="tab" onclick="showTab('updatesTab')">Updates</li>
+            <li class="tab" onclick="showTab('reviewsTab')">Reviews</li>
+            <li class="tab" onclick="showTab('floorMapTab')">Floor Map</li>
+        </ul>
+
+        <div id="descriptionTab" class="content">
+            <table class="description-table">
+                <tr>
+                  <th colspan="2"><img src="overview.png" height="20px">Overview</th>
+                </tr>
+                <tr>
+                  <td>Number of Floors</td>
+                  <td>3 floors</td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="center"><img src="toilet.png" height="20px"><b> Number of Restrooms</b></td>
+                </tr>
+                <tr>
+                  <td>First Floor</td>
+                  <td>2 Women, 2 Men</td>
+                </tr>
+                <tr>
+                  <td>Second Floor</td>
+                  <td>1 Women, 1 Men</td>
+                </tr>
+                <tr>
+                  <td>Third Floor</td>
+                  <td>1 Women, 1 Men</td>
+                </tr>
+               
+              </table>
+              <br>
+              <hr>
+              <br>
+              <center>
+              <iframe src="https://storage.googleapis.com/maps-solutions-nqbfoeorj7/locator-plus/qmuz/locator-plus.html"
+                width="550px" height="600px"
+                style="border:0;"
+                loading="lazy">
+              </iframe>
+              </center>
+        </div>
+
+        <div id="updatesTab" class="content">
+            <h2>Updates and Status</h2>
+            <table class="updates-table">
+                <tr>
+                    <th colspan="2"><img src="maintenance.png" height="20px"> Maintenance</th>
+                </tr>
+                <tr>
+                  <td align="center"><b>1st Floor</b></td>
+                  <td align="center"><b>Details</b></td>
+                </tr>
+                <tr>
+                  <td>Women - Backdrum</td>
+                  <td>On-going</td>
+                </tr>
+                <tr>
+                    <td>Women - Hallway</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                  <td>Men - Backdrum</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Men - Hallway</td>
+                    <td>Available</td>
+                </tr>
+
+                <tr>
+                    <td align="center"><b>2nd Floor</b></td>
+                    <td align="center"><b>Details</b></td>
+                  </tr>
+                  <tr>
+                    <td>Women</td>
+                    <td>Available</td>
+                  </tr>
+                  <tr>
+                      <td>Men</td>
+                      <td>Un-available</td>
+                  </tr>
+
+                  <tr>
+                    <td align="center"><b>3rd Floor</b></td>
+                    <td align="center"><b>Details</b></td>
+                  </tr>
+                  <tr>
+                    <td>Women</td>
+                    <td>Available</td>
+                  </tr>
+                  <tr>
+                      <td>Men</td>
+                      <td>Available</td>
+                  </tr>
+              </table>
+        </div>
+
+        <div id="reviewsTab" class="content">
+            <h2>Reviews</h2>
+            <div class="reviews-container" id="reviewsContainer">
+                <!-- Reviews will be dynamically added here -->
+              </div>
+              <br>
+              <hr>
+              <br>
+              <br>
+              <center><h3>Write your own review:</h3></center>
+              <!-- Fill-in Form -->
+              <div class="review-form">
+                <label for="name" class="review-label">Name:</label>
+                <input type="text" id="name" class="review-input" placeholder="Your Name">
+              
+                <label for="userReview" class="review-label">Your Review:</label>
+                <textarea id="userReview" class="review-input" rows="4" placeholder="Write your review"></textarea>
+              
+                <button class="review-btn" onclick="submitReview()">Submit Review</button>
+              </div>
+        </div>
+
+        <div id="floorMapTab" class="content">
+            <h2>Floor Map</h2>
+            <br>
+            <h3>1st Floor</h3>
+            <center><img src="melcher-hall-one.jpg" alt="1stfloor" height="300px"></center>
+            <br>
+            <h3>2nd Floor</h3>
+            <center><img src="melcher-hall-two1200.jpg" alt="2ndfloor" height="300px"></center>
+            <br>
+            <h3>3rd Floor</h3>
+            <center><img src="melcher-hall-three.jpg" alt="3rdfloor" height="300px"></center>
+        </div>
+    </div>
+
+    <script>
+    function showTab(tabId) {
+        // Hide all content divs
+        var contentDivs = document.querySelectorAll('.content');
+        contentDivs.forEach(function (div) {
+            div.style.display = 'none';
+        });
+
+        // Show the selected tab's content
+        var selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initially show the "description" tab
+            showTab('descriptionTab');
+        });
+
+    function submitReview() {
+    // Get user input
+    var name = document.getElementById('name').value;
+    var userReview = document.getElementById('userReview').value;
+
+    // Check if both name and comment are filled
+    if (!name || !userReview) {
+      alert('Please fill in both Name and Your Review before submitting.');
+      return;
+    }
+
+    // Create a new review element with "Pending for Approval" status
+    var reviewContainer = document.getElementById('reviewsContainer');
+    var reviewDiv = document.createElement('div');
+    reviewDiv.className = 'review';
+    reviewDiv.innerHTML = `<p><strong>${name}:</strong> ${userReview}</p>`;
+    var statusDiv = document.createElement('div');
+    statusDiv.className = 'status';
+    statusDiv.innerHTML = '<p>Status: Pending for Approval</p>';
+
+    // Append the new review and status to the reviews container
+    reviewContainer.appendChild(reviewDiv);
+    reviewContainer.appendChild(statusDiv);
+
+    // Clear the input fields
+    document.getElementById('name').value = '';
+    document.getElementById('userReview').value = '';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadReviews();
+
+    function loadReviews() {
+      // Simulated data for demonstration purposes
+      var reviews = [
+        { name: 'John Doe', content: 'Men Restroom on the second floor could use a little work.', status: 'Approved' }
+      ];
+
+      var reviewsContainer = document.getElementById('reviewsContainer');
+      reviewsContainer.innerHTML = '';
+
+      reviews.forEach(review => {
+        var reviewDiv = document.createElement('div');
+        reviewDiv.className = 'review';
+        reviewDiv.innerHTML = `<p><strong>${review.name}:</strong> ${review.content}</p>`;
+        var statusDiv = document.createElement('div');
+        statusDiv.className = 'status';
+        statusDiv.innerHTML = `<p>Status: ${review.status}</p>`;
+        reviewsContainer.appendChild(reviewDiv);
+        reviewsContainer.appendChild(statusDiv);
+      });
+    }
+  });
+</script>
+</body>
+</html>

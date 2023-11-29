@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation bar */
+header {
+    background-color: #76232F;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Style the welcome section */
+#welcome {
+    padding: 60px;
+    text-align: center;
+}
+
+#welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Style the "Find Nearest Restrooms" section */
+#find-restrooms {
+    background-color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+
+#find-restrooms h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    background-color: #C8102E;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: #76232F;
+}
+
+
+/* Style the map container */
+.map {
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* Style the restroom list */
+#restroom-list {
+    list-style-type: none;
+}
+
+#restroom-list li {
+    margin-bottom: 10px;
+}
+
+#chosen-location-info {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#result-info {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

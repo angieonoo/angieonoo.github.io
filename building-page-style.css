@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #76232F;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.building {
+    text-align: center;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.container1 {
+    max-width: 400px;
+    max-height: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-rating-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-rating-container img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    display: flex;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+    background-color: #C8102E;
+    border-radius: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.tab:hover {
+    background-color: #76232F;
+}
+
+.content {
+    display: none;
+    margin-top: 20px;
+}
+
+.description-table {
+    width: 100%;
+  }
+
+  .description-table th, .description-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .updates-table {
+    width: 100%;
+  }
+
+  .updates-table th, .updates-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+.reviews-container {
+    margin-top: 20px;
+}
+
+.review-form {
+    margin-bottom: 20px;
+}
+
+.review-input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.review-btn {
+    background-color: #C8102E;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.review-btn:hover {
+    background-color: #76232F;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review p {
+    margin: 0;
+}
+
+.status {
+    font-size: 14px; /* Adjust the font size as needed */
+    color: gray; /* Optional: Change the color if you want */
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .logo img {
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .image-rating-container img {
+        max-height: 150px;
+        margin-bottom: 5px;
+    }
+
+    .tabs {
+        flex-direction: row; /* Keep the tabs horizontal */
+        flex-wrap: wrap; /* Allow tabs to wrap onto the next line if necessary */
+        justify-content: space-around; /* Distribute tabs evenly */
+        margin: 10px 0;
+        border-radius: 0;
+    }
+
+    .tab {
+        padding: 5px;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .description-table th,
+    .description-table td,
+    .updates-table th,
+    .updates-table td {
+        padding: 5px;
+    }
+
+    .review-form {
+        margin-bottom: 10px;
+    }
+
+    .review-btn {
+        padding: 8px 15px;
+    }
+
+    .review-input {
+        margin-bottom: 5px;
+    }
+
+    .review p {
+        margin: 0;
+    }
+
+    /* Adjust the iframe width for smaller screens */
+    iframe {
+        width: 100%;
+    }
+
+        /* Adjust the styling of images in the floor map tab */
+        #floorMapTab img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+}
